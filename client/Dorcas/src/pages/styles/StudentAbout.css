@@ -1,0 +1,68 @@
+.about-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  min-height: 70vh;
+  box-sizing: border-box;
+  border-radius: 21px;
+}
+
+.description-container {
+  margin-top: 10px;
+  text-align: center;
+  padding: 15px;
+  background: #ecd999;;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+}
+
+.description {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 20px; /* Space below description */
+}
+
+.photo-container {
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  margin-top: 10px; /* Reduced space between description and image */
+}
+
+.photo-container img {
+  width: 100px; /* Set width of image */
+  margin-top: 27px;
+  height: 100px; /* Set height of image */
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Ensure image fits well inside the circle */
+  border: 2px solid #000000; /* Optional border around image */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .description {
+    font-size: 1rem;
+  }
+
+  .photo-container img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .photo-container img {
+    width: 70px;
+    height: 70px;
+  }
+}

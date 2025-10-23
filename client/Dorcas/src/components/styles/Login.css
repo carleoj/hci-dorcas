@@ -1,0 +1,32 @@
+.input-group {
+    margin-bottom: 20px; /* Add uniform bottom margin */
+}
+
+.input-group input {
+    margin: 8px 0px 0px 0px !important; /* Set the same margin for both inputs */
+    padding: 10px; /* Add padding for better appearance */
+    border-radius: 5px; /* Add border radius for input fields */
+    border: 1px solid #ccc; /* Add a border for better visibility */
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+}
+
+.login-btn {
+    padding: 12px;
+    background-color: #354b8a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+}
+
+.login-btn:hover {
+    background-color: #4CAF50;
+}

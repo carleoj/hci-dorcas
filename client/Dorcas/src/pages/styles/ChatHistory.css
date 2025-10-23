@@ -1,0 +1,64 @@
+.appointment-container-chat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.appointments-title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #354b8a;
+}
+
+.students-chats-container {
+  height: 450px; /* Fixed height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  border-radius: 18px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  width: 100%;
+}
+
+.chat-box {
+  margin-bottom: 10px; /* Space between chatboxes */
+  padding: 10px;
+  background-color: #354b8a;
+  border-radius: 8px;
+  height: auto; /* Allow height to adjust dynamically */
+  cursor: pointer;
+  display: flex;
+  flex-direction: column; /* Stack name and time vertically */
+  justify-content: flex-start; /* Align items to the top */
+}
+
+.chat-box:hover {
+  background-color: #506db8;
+}
+
+.chat-box-header {
+  font-size: 20px; /* Font size for the name */
+  color: white; /* Adjusted for visibility on dark background */
+  margin-bottom: 5px; /* Space between name and time */
+}
+
+.chat-box-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.chat-box-time {
+  font-size: 14px; /* Smaller font size for the time */
+  color: #d1d1d1; /* Light gray for subtle contrast */
+}
+
+.chat-box-date {
+  font-size: 14px; /* Same size as time for consistency */
+  color: #d1d1d1; /* Light gray */
+  text-align: right; /* Right-align the date */
+  flex-shrink: 0; /* Prevent shrinking */
+  margin-left: 10px; /* Add space between the time and date */
+}

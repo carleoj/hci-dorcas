@@ -1,0 +1,146 @@
+/* styles.css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    padding: 0px;
+  }
+  
+  /* Mobile-first layout */
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .app-main {
+    /* Vertical gradient with three colors */
+    background: linear-gradient(to bottom, #354b8a, #546aa6, #c7c396);
+    height: 84vh; /* Ensure the height fills the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  
+  .app-footer {
+    border-top: 1px solid rgb(255, 255, 255);
+    background-color: #c7c396;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .primary-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Media Queries for larger screens */
+  @media (min-width: 768px) {
+    
+  
+    .app-main {
+      padding: 40px;
+    }
+  
+    .primary-button {
+      width: auto; /* Allow button to shrink back */
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  /* LandingA.css */
+  .app-main-content {
+    position: relative; /* Make it a containing block for absolutely positioned elements */
+    height: 100%;
+    width: 100%;
+  }
+  
+  .overlay-section {
+    position: absolute; /* Position it absolutely relative to its container */
+    top: 30px; /* Position it 20px from the top */
+    left: 50%;
+    height: 530px;
+    opacity: 0.8;
+    transform: translateX(-50%); /* Center horizontally */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background with opacity */
+    padding: 20px;
+    color: black;
+    border-radius: 21px;
+    text-align: center;
+    width: 90%; /* You can adjust the width as needed */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for better contrast */
+  }
+  
+  @media (min-width: 768px) {
+    .overlay-section {
+      width: 60%; /* Wider section for larger screens */
+    }
+  }
+  
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 310px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 18px;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  h3{
+    font-size: 26px;
+    padding: 10px;
+  }
+  
+  .logoimg {
+    height: 200px;
+  }
+  
+  h2 {
+    font-size: 50px;
+    color: #2c3e7d;
+  }
+  
+  .buttons-container {
+    display: flex;
+    flex-direction: column; /* Stacking buttons vertically */
+    padding: 10px; /* Reduced padding */
+    border-radius: 18px;
+    height: 150px; /* Fixed height */
+    margin: 15px;
+    align-items: center; /* Centers buttons horizontally */
+    justify-content: center; /* Centers buttons vertically */
+  }
+  
+  .slogin, .signup {
+    border: 1px solid black;
+    height: 40px; /* Adjusted height */
+    width: 200px; /* Button width */
+    border-radius: 18px;
+    margin: 10px 0; /* Small margin between buttons */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .slogin:hover, .signup:hover {
+    background-color: #4CAF50; /* Hover effect color */
+    color: white; /* Text color on hover */
+  }
+  
+  

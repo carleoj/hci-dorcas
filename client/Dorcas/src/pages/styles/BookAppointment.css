@@ -1,0 +1,272 @@
+.appointment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.appointments-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.separator {
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin-bottom: 20px;
+}
+
+.add-request-button {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #354b8a;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 15px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.add-request-button:hover {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+.appointment-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure modal is on top */
+}
+
+.appointment-modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Adjust width as needed */
+    width: 100%;
+}
+
+.appointment-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #aaa; /* Light gray close button */
+}
+
+.appointment-modal h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.appointment-modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.appointment-label {
+    color: black;
+    margin-bottom: 10px;
+    font-weight: bold; /* Ensure labels are bold for better visibility */
+}
+
+.appointment-input {
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 5px;
+    font-size: 14px; /* Adjust input font size */
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.submit-button,
+.cancel-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px; /* Adjust button font size */
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.cancel-button {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.submit-button:hover,
+.cancel-button:hover {
+    opacity: 0.8;
+}
+
+.appointment-input {
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px; /* Adjust input font size */
+    width: calc(100% - 16px); /* Adjust width as needed */
+}
+
+.active-requests{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 0 10px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 62vh;
+    border-radius: 8px;
+    height: 350px;
+    background-color: #f1f1f1;
+    width: 100%;
+}
+
+.active-requests p{
+    color: #354b8a;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    padding: 10px;
+    text-align: left;
+}
+
+.confirmation-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001; 
+}
+
+.confirmation-modal-content{
+    color: black;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Adjust width as needed */
+    width: 100%;
+}
+
+.confirmation-modal-content h2{
+    font-size: 30px;
+    padding: 20px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.submit-button,
+.cancel-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px; /* Adjust button font size */
+    width: 48%; /* Ensure buttons have the same width */
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.cancel-button {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.submit-button:hover,
+.cancel-button:hover {
+    opacity: 0.8;
+}
+
+.active-requests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 0 10px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 62vh; /* Set max height */
+    border-radius: 8px;
+    height: 350px;
+    background-color: rgba(255, 255, 255, 0); 
+    width: 100%;
+}
+
+.appointment-card-s {
+    margin: 15px 10px 10px 10px;
+    background-color: #fffac3;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    width: 300px; /* Adjust width as needed */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0.3, 0.3);
+}
+
+.appointment-card-s p{
+    font-size: 20px;
+    color: black; 
+}
+
+.appointment-card-s h3 {
+    margin: 0;
+    font-size: 1.5rem; /* Adjust heading size */
+    color: #354b8a; /* Color for appointment reason */
+}
+
+.active-requests::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+.active-requests::-webkit-scrollbar-track {
+    background: #fffac3; /* Background of the scrollbar track */
+}
+
+.active-requests::-webkit-scrollbar-thumb {
+    background: #354b8a; /* Color of the scrollbar handle */
+    border-radius: 6px; /* Round the edges of the scrollbar handle */
+}
+
+.active-requests::-webkit-scrollbar-thumb:hover {
+    background: #007bff; /* Color when hovering over the handle */
+}
+
+/* Scrollbar for Firefox */
+.active-requests {
+    scrollbar-width: thick; /* Set scrollbar width */
+    scrollbar-color: #354b8a #fffac3; /* Handle color and track color */
+}
+
+

@@ -1,0 +1,7 @@
+body {
+    background: linear-gradient(to bottom, #354b8a, #546aa6, #c7c396);
+    min-height: 100vh;
+    background-attachment: fixed;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}

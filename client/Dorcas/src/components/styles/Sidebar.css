@@ -1,0 +1,85 @@
+/* Sidebar.css */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px; /* Hide off-screen initially */
+    width: 280px;
+    height: 100%;
+    background-color: #fff; /* Background color */
+    transition: left 0.3s ease; /* Animation for sliding */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.sidebar.open {
+    left: 0; /* Show when open */
+}
+
+/* Sidebar.css */
+
+/* General link button styling */
+.sidebar ul li {
+    list-style-type: none; /* Remove default list styling */
+}
+
+.sidebar li a {
+    display: block; /* Make the link a block element */
+    padding: 25px; /* Add padding for a larger clickable area */
+    text-decoration: none; /* Remove underline */
+    margin: 10px 15px 0px 15px;
+    margin-bottom: 15px;
+    color: #354b8a; /* Link text color */
+    background-color: #fff99e; /* Background color for the links */
+    border-radius: 12px; /* Rounded corners */
+    border: 1px solid black;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.sidebar li a:hover {
+    background-color: #354b8a; /* Background color on hover */
+    color: #ffffff; /* Text color on hover */
+}
+
+
+/* Sidebar.css */
+/* Sidebar.css */
+.close-btn {
+    display: flex; /* Use Flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor for button */
+    padding: 10px; /* Add padding for the button */
+}
+
+.icon {
+    font-size: 35px; /* Increase the size of the arrow icon */
+    color: #354b8a; /* Match the color of your links or adjust as needed */
+}
+
+.menu-text {
+    margin-left: 10px; /* Space between the icon and text */
+    font-size: 24px; /* Increase the size of the MENU text */
+    color: #354b8a; /* Match the color of your links or adjust as needed */
+}
+
+.logo-box {
+    height: 230px;
+    background-color: rgb(202, 207, 212);
+    margin: 10px;
+    display: flex; /* Change from flexbox to flex */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    border-radius: 21px;
+}
+
+.logo-box p {
+    text-align: center;
+    font-size: 15px; /* Font size for other texts */
+    color: #354b8a;
+}
+
+.logo-box p:first-child {
+    font-size: 30px; /* Make DORCAS logo slightly smaller */
+}

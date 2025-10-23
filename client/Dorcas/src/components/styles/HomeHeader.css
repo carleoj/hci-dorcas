@@ -1,0 +1,42 @@
+/* HomeHeader.css */
+.home-app-header {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    color: #354b8a;
+    background-color: rgb(255, 255, 255);
+    height: 70px;
+    padding: 0 20px; /* Add horizontal padding */
+    border-bottom: 1px solid rgb(255, 255, 255);
+    position: relative; /* Ensure relative positioning */
+    z-index: 1; /* Set z-index for stacking context */
+}
+
+.hamburger-icon {
+    cursor: pointer;
+    font-size: 32px; /* Ensure size matches the logo */
+    margin-right: 15px; /* Space between icon and logo */
+    z-index: 2; /* Ensure icon is above other elements */
+}
+
+.logo {
+    font-size: 32px; /* Ensure logo size matches the icon */
+    margin-left:  30px; /* Remove default margin */
+    flex-grow: 1; /* Allow the logo to take available space */
+    text-align: center; /* Center logo text */
+}
+
+.logout-btn{
+    height: 40px;
+    width: 70px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: #fff99e;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.logout-btn:hover{
+    background-color: #354b8a;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}

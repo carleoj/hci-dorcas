@@ -1,0 +1,216 @@
+body {
+    background: linear-gradient(to bottom, #354b8a, #546aa6, #c7c396);
+    min-height: 100vh;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.appointments-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #354b8a;
+}
+
+.separator {                    
+    width: 90%;
+    height: 2px;
+    background-color: #ddd;             
+    margin: 0 auto 20px auto;
+    border-radius: 5px;
+}
+
+.appointments-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.appointment-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.appointment-card:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: inherit;
+    z-index: -1;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.appointment-card:hover {
+    transform: scale(1.05);
+}
+
+.appointment-card h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+    color: black;
+}
+
+.appointment-card p {
+    margin: 5px 0;
+    color: black;
+}
+
+.appointment-buttons {
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.view-more-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view-more-button:hover {
+    background-color: #0056b3;
+}
+
+.accept-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.decline-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.accept-button:hover {
+    background-color: darkgreen;
+}
+
+.decline-button:hover {
+    background-color: darkred;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 95%;
+    height: auto;
+    position: relative;
+    color: black;
+}
+
+.modal-separator {
+    width: 100%;
+    height: 2px;
+    background-color: #ddd;
+    margin: 10px 0;
+}
+
+.modal-details {
+    text-align: left;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    color: black;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .appointments-title {
+        font-size: 1.8em;
+    }
+
+    .separator {
+        width: 95%;
+    }
+
+    .appointment-card {
+        max-width: 100%;
+    }
+}
+
+.appointments-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px 10px;
+    overflow-y: auto; 
+    max-height: 62vh; 
+}
+
+.close-card-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5em;
+  color: red;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.close-card-button:hover {
+  color: darkred;
+}
+
+.complete-button {
+    background-color: #ffa500; /* Orange color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.complete-button:hover {
+    background-color: #cc8400; /* Darker orange on hover */
+}
+
+

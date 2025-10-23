@@ -1,0 +1,141 @@
+/* Styling for content container */
+.content-container {
+    padding: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;  /* This will push items to opposite sides */
+    align-items: center;
+}
+
+.welcome-message {
+    margin: 0;
+}
+
+.connection-status {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    color: #157218;  /* Green color for text */
+}
+
+.green-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(72, 128, 72);
+    margin-right: 5px;
+}
+
+/* Styling for student content container */
+.student-content-container {
+    padding: 20px;
+    font-size: 1.1em;
+    margin-top: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid rgb(255, 255, 255);
+    height: 440px; /* Default height */
+    max-height: 80vh; /* Add a maximum height for better responsiveness */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.student-content-container p {
+    color: #354b8a;
+    font-family: 'Arial', sans-serif; /* Ensure consistency */
+    margin-bottom: 15px; /* Add spacing below "YOUR APPOINTMENTS" */
+}
+
+/* Scrollable table container */
+.table-container {
+    max-height: 300px; /* Set a maximum height for the table container */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    margin-top: 10px; /* Add some spacing from the header */
+    border: 1px solid #ddd; /* Optional: add a border to the scrollable area */
+    border-radius: 8px; /* Optional: make the edges rounded */
+}
+
+/* Styling for the table (unchanged from your existing styles) */
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9em;
+    text-align: left;
+    color: #333;
+    table-layout: fixed;
+}
+
+.student-table th, .student-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #ddd;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.student-table th {
+    background-color: #354b8a;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.student-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.student-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.student-table td {
+    text-align: center;
+}
+
+/* Media query for mobile screens */
+@media (max-width: 659px) {
+    .student-content-container {
+        padding: 15px;
+        font-size: 1em !important; /* Smaller font size for student content */
+        min-height: 300px; /* Set a reasonable minimum height */
+        max-height: 70vh; /* Allow it to grow up to 70% of the viewport height */
+        height: auto; /* Ensure it adapts naturally */
+    }
+}
+
+@media (min-width: 700px){
+    .content-container {
+        padding: 15px;
+        font-size: 1em !important; /* Ensure this applies on smaller screens */
+    }
+
+    .welcome-message {
+        font-size: 1.3em !important; /* Smaller font size for welcome message */
+    }
+
+    .connection-status {
+        font-size: 1.3em !important; /* Smaller font size for connected status */
+    }
+
+    .green-circle {
+        width: 15px;
+        height: 15px; /* Smaller circle for mobile */
+    }
+
+    .student-content-container {
+        padding: 15px;
+        font-size: 1em !important; /* Smaller font size for student content */
+        height: 500px; /* Allow height to adjust automatically */
+        max-height: 60vh; /* Limit the height to 60% of the viewport height */
+    }
+
+    .table-container {
+        max-height: 500px; /* Reduce table height for smaller screens */
+    }
+}

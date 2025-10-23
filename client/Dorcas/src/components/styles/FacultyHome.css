@@ -1,0 +1,72 @@
+.dashboard-stats {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensure items wrap onto the next line */
+    gap: 15px; /* Adds space between containers */
+    margin-top: 20px;
+    max-height: 400px; /* Constrain the container's height */
+    overflow-y: auto; /* Allow vertical scrolling if content exceeds */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    padding: 10px; /* Optional: padding for inner content */
+    box-sizing: border-box; /* Ensure padding is part of width */
+}
+
+.dashboard-stats::-webkit-scrollbar {
+    width: 8px;  
+}
+.dashboard-stats::-webkit-scrollbar-thumb {
+    background: #ccc; /* Scrollbar color */
+    border-radius: 4px; /* Rounded scrollbar edges */
+}
+.dashboard-stats::-webkit-scrollbar-thumb:hover {
+    background: #999; /* Darker on hover */
+}   
+.stat-container {
+    flex: 1 1 calc(25% - 15px); /* 4 containers in a row */
+    padding: 20px;
+    text-align: center;
+    background-color: #ffecae;
+    border-radius: 12px;
+    height: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Ensure padding is included in width */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.stat-container:hover {
+    transform: scale(1.06);
+}
+
+.stat-container h4 {
+    font-size: 1.5em;
+    margin: 0;
+    color: #354b8a;
+}
+
+.stat-container p {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px 0 0;
+    color: #157218;
+}
+
+@media (max-width: 718px) {
+    .stat-container {
+        height: 100px;
+        flex: 1 1 100%; /* Stacks all containers in one column */
+    }
+    .dashboard-stats {
+        max-height: 300px; /* Adjust height for smaller screens */
+    }
+}
+
+/* Media query for screens smaller than 660px */
+@media (max-width: 659px) {
+    .stat-container {
+        height: 100px;
+        flex: 1 1 100%; /* Stacks all containers in one column */
+    }
+    .dashboard-stats {
+        max-height: 300px; /* Adjust height for smaller screens */
+    }
+}

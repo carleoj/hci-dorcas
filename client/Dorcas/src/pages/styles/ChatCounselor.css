@@ -1,0 +1,116 @@
+.appointment-container-chat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .chatbox-container {
+    display: flex;
+    flex-direction: column;
+    height: 420px; /* Increased to accommodate the profile section */
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 18px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Profile Section Styling */
+  .profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .profile-image-container {
+    margin-right: 15px;
+  }
+  
+  .profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .counselor-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #354b8a;
+  }
+  
+  .counselor-role {
+    font-size: 14px;
+    color: gray;
+    color: #354b8a;
+  }
+  
+  .messages-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  
+  .message {
+    margin: 5px 0;
+    padding: 8px;
+    background-color: #aab2cd;
+    color: #4b4957;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between; /* Distribute space between message and time */
+    align-items: center;
+    width: 100%; /* Ensure the messages take up the full width */
+  }
+  
+  .message.user {
+    background-color: #d0d0d0;
+    color: rgb(66, 66, 66);
+    justify-content: space-between; /* Ensure the message is left aligned */
+  }
+  
+  .message-time {
+    font-size: 12px;
+    color: gray;
+    margin-left: 10px;
+    align-self: flex-start; /* Ensure the time is positioned correctly */
+    order: 1; /* Ensure the time is always on the right side */
+  }
+  
+  .input-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .message-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .send-button {
+    padding: 10px;
+    border: none;
+    background-color: #354b8a;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .send-button:hover {
+    background-color: #0056b3;
+  }
+  

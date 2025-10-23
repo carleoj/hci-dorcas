@@ -1,0 +1,47 @@
+.app-body {
+    background: linear-gradient(to bottom, #354b8a, #546aa6, #c7c396);
+    height: 85vh; /* Ensure the height fills the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative; /* Make the app-body a positioning context */
+}
+
+.transparent-container {
+    width: 90%; /* Set width to 90% of the parent */
+    height: 90%; /* Set height to 90% of the parent */
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    padding: 20px; /* Add padding */
+    border-radius: 21px; /* Optional: rounded corners */
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow */
+    display: flex; /* Use flexbox for content alignment */
+    flex-direction: column;
+}
+
+.content-container {
+    display: flex; /* Use flexbox for content alignment */
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid rgb(255, 255, 255) ;
+}
+
+.content-container p {
+    text-align: left;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.student-content-container p{
+    text-align: center;
+    font-size: 27px;
+    margin: 25px 10px 0px 0px;
+}
+
+.home-app-footer {
+    border-top: 1px solid rgb(255, 255, 255);
+    background-color: #c7c396;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

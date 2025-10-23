@@ -1,0 +1,155 @@
+/* SignupForm.css */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.app-main {
+    background: linear-gradient(to bottom, #354b8a, #546aa6, #c7c396);
+    height: 84vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.app-footer {
+    border-top: 1px solid white;
+    background-color: #c7c396;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.app-main-content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.overlay-section {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    color: black;
+    border-radius: 21px;
+    text-align: center;
+    width: 90%;
+    height: 94%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+    .overlay-section {
+        width: 60%;
+    }
+    }
+
+.logo-container2 h3 {
+    font-size: 26px;
+    color: #2c3e7d;
+    padding: 10px;
+}
+
+.form-container {
+    margin-top: 20px;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+}
+.input-group {
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: left;
+}
+.input-group label {
+    font-size: 0.9rem;
+    color: #382071;
+    margin-left: 10px;
+}
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+.input-group input:focus {
+    border-color: #354b8a;
+    outline: none;
+    background-color: #fff;
+}
+/* New styling for input-row */
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+.input-row .input-group {
+    flex: 1;
+}
+.signup-btn {
+    padding: 12px;
+    background-color: #354b8a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+.signup-btn:hover {
+    background-color: #2c3e7d;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.modal-content h2 {
+    color: #354b8a;
+    font-size: 1.5rem;
+}
+
+.modal-content p {
+    margin: 10px 0;
+}
+
+.modal-content button {
+    background-color: #354b8a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+}
