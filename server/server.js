@@ -13,7 +13,6 @@ app.use(bodyParser.json());
 app.use('/api', userRoutes);
 app.use('/api', appRoutes);
 
-
 const PORT = 8081;
 app.listen(PORT, () => {
     console.log(`Listening to http://localhost:${PORT}`);
