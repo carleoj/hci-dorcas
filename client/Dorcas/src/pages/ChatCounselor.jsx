@@ -1,13 +1,13 @@
-import React, { useState, useEffect, useRef } from 'react';
-import './styles/ChatCounselor.css';
-import sirRigel from '../assets/sir.jpg';
+import React, { useState, useEffect, useRef } from "react";
+import "./styles/ChatCounselor.css";
+import sirRigel from "../assets/sir.jpg";
 
 const ChatCounselor = () => {
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
   const messagesEndRef = useRef(null); // Reference to the end of the messages container
-  const userId = sessionStorage.getItem('student_id'); // Get the dynamic student ID
-  const chatPartnerId = '00-0000'; // Fixed chat partner ID (counselor)
+  const userId = sessionStorage.getItem("student_id"); // Get the dynamic student ID
+  const chatPartnerId = "00-0000"; // Fixed chat partner ID (counselor)
 
   // Fetch messages from the backend
   useEffect(() => {
@@ -16,24 +16,24 @@ const ChatCounselor = () => {
 
       try {
         const response = await fetch(
-          `http://localhost:8081/api/get-messages?userId=${userId}&chatPartnerId=${chatPartnerId}`
+          `http://localhost:8081/api/get-messages?userId=${userId}&chatPartnerId=${chatPartnerId}`,
         );
 
         if (!response.ok) {
-          throw new Error('Failed to fetch messages');
+          throw new Error("Failed to fetch messages");
         }
 
-        const data = await response.json(); 
+        const data = await response.json();
         setMessages(data);
       } catch (error) {
-        console.error('Error fetching messages:', error);
+        console.error("Error fetching messages:", error);
       }
     };
 
     fetchMessages();
   }, [userId]);
 
-  // Send a message to the backend  
+  // Send a message to the backend
   const handleSendMessage = async () => {
     if (message.trim()) {
       const newMessage = {
@@ -42,32 +42,34 @@ const ChatCounselor = () => {
         message_text: message,
         isRead: false, // Mark the new message as 'New'
       };
-  
+
       try {
-        const response = await fetch('http://localhost:8081/api/send-messages', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
+        const response = await fetch(
+          "http://localhost:8081/api/send-messages",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newMessage),
           },
-          body: JSON.stringify(newMessage),
-        });
-  
+        );
+
         if (!response.ok) {
-          throw new Error('Failed to send message');
+          throw new Error("Failed to send message");
         }
-  
+
         const sentMessage = await response.json();
-  
+
         // Update the local state to add the sent message and keep it as 'New'
         setMessages((prevMessages) => [
           ...prevMessages,
           { ...sentMessage, isRead: false }, // New message marked as unread
         ]);
-        
-        setMessage(''); // Clear input field
-  
+
+        setMessage(""); // Clear input field
       } catch (error) {
-        console.error('Error sending message:', error);
+        console.error("Error sending message:", error);
       }
     }
   };
@@ -75,7 +77,7 @@ const ChatCounselor = () => {
   // Scroll to the bottom of the chatbox whenever new messages are added
   useEffect(() => {
     if (messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [messages]); // Trigger scroll when messages change
 
@@ -103,10 +105,21 @@ const ChatCounselor = () => {
         {/* Messages Section */}
         <div className="messages-container">
           {messages.map((msg, index) => (
-            <div key={index} className={`message ${msg.sender_id === userId ? 'user' : 'counselor'}`}>
+            <div
+              key={index}
+              className={`message ${msg.sender_id === userId ? "user" : "counselor"}`}
+            >
               <div className="message-text">{msg.message_text}</div>
               <div className="message-time">
-                {new Date(msg.sent_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                {new Date(msg.sent_at).toLocaleString("en-US", {
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric",
+                  hour: "2-digit",
+                  minute: "2-digit",
+                  second: "2-digit",
+                  hour12: true,
+                })}
               </div>
             </div>
           ))}
