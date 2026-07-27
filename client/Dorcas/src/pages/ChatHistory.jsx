@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './styles/ChatHistory.css';
 import ChatModal from '../components/ChatModal'; // Import the modal
+import { api } from '../api';
 
 const ChatHistory = () => {
   const [students, setStudents] = useState([]);
@@ -10,7 +11,7 @@ const ChatHistory = () => {
   useEffect(() => {
     const fetchChatHistory = async () => {
       try {
-        const response = await fetch('http://localhost:8081/api/chat-history');
+        const response = await fetch(api('/api/chat-history'));
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }

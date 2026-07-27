@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './styles/FacultyHome.css';
+import { api } from '../api';
 
 const FacultyHome = () => {
   const [counts, setCounts] = useState({
@@ -14,7 +15,7 @@ const FacultyHome = () => {
   useEffect(() => {
     const fetchCounts = async () => {
       try {
-        const response = await fetch('http://localhost:8081/api/request-counts'); // Adjust URL as needed
+        const response = await fetch(api('/api/request-counts'));
         if (response.ok) {
           const data = await response.json();
           setCounts(data);

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './styles/BookAppointment.css';
+import { api } from '../api';
 
 const BookAppointment = () => {
     const initialFormData = {
@@ -31,7 +32,7 @@ const BookAppointment = () => {
         }
     
         try {
-            const response = await fetch(`http://localhost:8081/api/get-user-appointments/${studentId}`); 
+            const response = await fetch(api(`/api/get-user-appointments/${studentId}`)); 
             if (!response.ok) {
                 throw new Error(`Failed to fetch appointments: ${response.statusText}`);
             }
@@ -54,7 +55,7 @@ const BookAppointment = () => {
 
     const handleConfirmSubmit = async () => {
         try {
-            const response = await fetch('http://localhost:8081/api/add-new-request', {
+            const response = await fetch(api('/api/add-new-request'), {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

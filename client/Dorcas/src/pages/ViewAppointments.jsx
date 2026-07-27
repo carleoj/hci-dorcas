@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import './styles/ViewAppointments.css'; 
+import './styles/ViewAppointments.css';
+import { api } from '../api'; 
 
 const ViewAppointments = () => {
     const [appointments, setAppointments] = useState([]);
@@ -10,7 +11,7 @@ const ViewAppointments = () => {
     useEffect(() => {
         const fetchAppointments = async () => {
             try {
-                const response = await fetch('http://localhost:8081/api/get-appointments'); 
+                const response = await fetch(api('/api/get-appointments')); 
                 if (!response.ok) {
                     throw new Error('Failed to fetch appointments');
                 }
@@ -31,7 +32,7 @@ const ViewAppointments = () => {
     const handleAcceptRequest = async () => {
         if (toAcceptAppointment) {
             try {
-                const response = await fetch('http://localhost:8081/api/accept-appointment', {
+                const response = await fetch(api('/api/accept-appointment'), {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -69,7 +70,7 @@ const ViewAppointments = () => {
     const handleDeclineRequest = async () => {
         if (toDeclineAppointment) {
             try {
-                const response = await fetch('http://localhost:8081/api/decline-appointment', {
+                const response = await fetch(api('/api/decline-appointment'), {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -102,7 +103,7 @@ const ViewAppointments = () => {
 
     const handleMarkAsComplete = async (appointment) => {
         try {
-            const response = await fetch('http://localhost:8081/api/mark-as-complete', {
+            const response = await fetch(api('/api/mark-as-complete'), {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

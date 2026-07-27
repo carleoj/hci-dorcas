@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./styles/ChatCounselor.css";
 import sirRigel from "../assets/sir.jpg";
+import { api } from '../api';
 
 const ChatCounselor = () => {
   const [message, setMessage] = useState("");
@@ -16,7 +17,7 @@ const ChatCounselor = () => {
 
       try {
         const response = await fetch(
-          `http://localhost:8081/api/get-messages?userId=${userId}&chatPartnerId=${chatPartnerId}`,
+          api(`/api/get-messages?userId=${userId}&chatPartnerId=${chatPartnerId}`),
         );
 
         if (!response.ok) {
@@ -45,7 +46,7 @@ const ChatCounselor = () => {
 
       try {
         const response = await fetch(
-          "http://localhost:8081/api/send-messages",
+          api("/api/send-messages"),
           {
             method: "POST",
             headers: {

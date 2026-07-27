@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './styles/StudentHome.css';
+import { api } from '../api';
 
 const StudentHome = () => {
     const [appointments, setAppointments] = useState([]);
@@ -10,7 +11,7 @@ const StudentHome = () => {
         // Fetch appointments from the backend using fetch
         const fetchAppointments = async () => {
             try {
-                const response = await fetch(`http://localhost:8081/api/appointments?studentId=${studentId}`);
+                const response = await fetch(api(`/api/appointments?studentId=${studentId}`));
                 if (response.ok) {
                     const data = await response.json();
                     setAppointments(data); // Store appointments in state

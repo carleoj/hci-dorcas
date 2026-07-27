@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from './Header';
 import './styles/Signup.css';
+import { api } from '../api';
 
 const Signup = () => {
     const [studentId, setStudentId] = useState('');
@@ -25,7 +26,7 @@ const Signup = () => {
         };
     
         try {
-            const response = await fetch('http://localhost:8081/api/signup', {
+            const response = await fetch(api('/api/signup'), {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

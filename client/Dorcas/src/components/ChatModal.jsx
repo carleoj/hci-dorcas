@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './styles/ChatModal.css';
+import { api } from '../api';
 
 const ChatModal = ({ studentId, studentName, onClose }) => {
   const [messages, setMessages] = useState([]);
@@ -15,7 +16,7 @@ const ChatModal = ({ studentId, studentName, onClose }) => {
     const fetchMessages = async () => {
         try {
           const response = await fetch(
-            `http://localhost:8081/api/get-messages?userId=00-0000&chatPartnerId=${studentId}`
+            api(`/api/get-messages?userId=00-0000&chatPartnerId=${studentId}`)
           );
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -40,7 +41,7 @@ const ChatModal = ({ studentId, studentName, onClose }) => {
     if (newMessage.trim() === '') return;
   
     try {
-      const response = await fetch('http://localhost:8081/api/counselor-send-message', {
+      const response = await fetch(api('/api/counselor-send-message'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

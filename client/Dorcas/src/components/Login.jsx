@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 import './styles/Login.css';
+import { api } from '../api';
 
 const Login = ({ onLogin }) => {
     const [username, setUsername] = useState('');
@@ -13,7 +14,7 @@ const Login = ({ onLogin }) => {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:8081/api/login', {
+            const response = await fetch(api('/api/login'), {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
