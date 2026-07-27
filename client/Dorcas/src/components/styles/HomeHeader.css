@@ -1,42 +1,136 @@
 /* HomeHeader.css */
 .home-app-header {
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center items vertically */
+    display: flex;
+    align-items: center;
     color: #354b8a;
     background-color: rgb(255, 255, 255);
     height: 70px;
-    padding: 0 20px; /* Add horizontal padding */
+    padding: 0 20px;
     border-bottom: 1px solid rgb(255, 255, 255);
-    position: relative; /* Ensure relative positioning */
-    z-index: 1; /* Set z-index for stacking context */
+    position: relative;
+    z-index: 1001;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .hamburger-icon {
     cursor: pointer;
-    font-size: 32px; /* Ensure size matches the logo */
-    margin-right: 15px; /* Space between icon and logo */
-    z-index: 2; /* Ensure icon is above other elements */
+    font-size: 28px;
+    margin-right: 15px;
+    z-index: 1002;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.hamburger-icon:hover {
+    background-color: rgba(53, 75, 138, 0.1);
+}
+
+.hamburger-icon:active {
+    background-color: rgba(53, 75, 138, 0.2);
 }
 
 .logo {
-    font-size: 32px; /* Ensure logo size matches the icon */
-    margin-left:  30px; /* Remove default margin */
-    flex-grow: 1; /* Allow the logo to take available space */
-    text-align: center; /* Center logo text */
+    font-size: 28px;
+    margin-left: 30px;
+    flex-grow: 1;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
-.logout-btn{
+.logout-btn {
     height: 40px;
-    width: 70px;
+    min-width: 80px;
+    padding: 0 16px;
     border-radius: 10px;
-    border: 1px solid black;
+    border: 1px solid #354b8a;
     background-color: #fff99e;
-    transition: background-color 0.3s, color 0.3s;
+    color: #354b8a;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
-.logout-btn:hover{
+.logout-btn:hover {
     background-color: #354b8a;
-    border: 1px solid white;
+    border-color: #354b8a;
     color: white;
-    cursor: pointer;
+}
+
+.logout-btn:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+    .home-app-header {
+        height: 60px;
+        padding: 0 16px;
+    }
+    
+    .hamburger-icon {
+        font-size: 24px;
+        margin-right: 12px;
+    }
+    
+    .logo {
+        font-size: 22px;
+        margin-left: 10px;
+    }
+    
+    .logout-btn {
+        height: 36px;
+        min-width: 60px;
+        font-size: 13px;
+        padding: 0 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-app-header {
+        height: 56px;
+        padding: 0 12px;
+    }
+    
+    .hamburger-icon {
+        font-size: 26px;
+        margin-right: 10px;
+        padding: 6px;
+    }
+    
+    .logo {
+        font-size: 18px;
+        margin-left: 5px;
+    }
+    
+    .logout-btn {
+        height: 32px;
+        min-width: 50px;
+        font-size: 12px;
+        padding: 0 10px;
+    }
+}
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

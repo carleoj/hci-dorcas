@@ -35,6 +35,8 @@ const HomeHeader = ({ userRole, onLogout }) => {
                 <button className='logout-btn' onClick={handleLogout}>Logout</button>
             </header>
             
+            {isOpen && <div className="sidebar-overlay" onClick={toggleSidebar} />}
+            
             {userRole === 'student' ? (
                 <StudentSidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
             ) : userRole === 'counselor' ? (

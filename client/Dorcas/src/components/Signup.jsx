@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Header from './Header';
 import './styles/Signup.css';
 import { api } from '../api';
@@ -131,6 +132,9 @@ const Signup = () => {
                                 </div>
                                 <button type="submit" className="signup-btn">Create Account</button>
                             </form>
+                            <div className="auth-switch">
+                                <p>Already have an account? <Link to="/login" className="auth-link">Log in</Link></p>
+                            </div>
                             {message && <p>{message}</p>}
                         </div>
                     </div>

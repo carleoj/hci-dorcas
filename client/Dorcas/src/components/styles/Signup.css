@@ -40,8 +40,10 @@
     border-radius: 21px;
     text-align: center;
     width: 90%;
-    height: 94%;
+    max-height: 94%;
+    overflow-y: auto;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
@@ -65,29 +67,36 @@
     flex-direction: column;
 }
 .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     width: 100%;
     text-align: left;
 }
+
 .input-group label {
-    font-size: 0.9rem;
-    color: #382071;
-    margin-left: 10px;
+    display: block;
+    font-size: 0.95rem;
+    color: #354b8a;
+    font-weight: 500;
+    margin-bottom: 8px;
 }
+
 .input-group input {
     width: 100%;
-    padding: 12px;
-    margin-top: 8px;
+    padding: 12px 14px;
+    margin-top: 0;
     border-radius: 8px;
     border: 1px solid #ddd;
     font-size: 1rem;
     background-color: #f9f9f9;
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
 }
+
 .input-group input:focus {
     border-color: #354b8a;
     outline: none;
     background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(53, 75, 138, 0.1);
 }
 /* New styling for input-row */
 .input-row {
@@ -100,18 +109,27 @@
     flex: 1;
 }
 .signup-btn {
-    padding: 12px;
+    padding: 14px 24px;
     background-color: #354b8a;
     color: white;
     border: none;
     border-radius: 8px;
     font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
     margin-top: 10px;
+    -webkit-tap-highlight-color: transparent;
 }
+
 .signup-btn:hover {
     background-color: #2c3e7d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(53, 75, 138, 0.3);
+}
+
+.signup-btn:active {
+    transform: translateY(0);
 }
 
 .modal {
@@ -148,8 +166,103 @@
     background-color: #354b8a;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
     text-transform: uppercase;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 16px;
+}
+
+.modal-content button:hover {
+    background-color: #2c3e7d;
+    transform: translateY(-2px);
+}
+
+.auth-switch {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.auth-switch p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.auth-link {
+    color: #354b8a;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.auth-link:hover {
+    color: #2c3e7d;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .overlay-section {
+        padding: 16px;
+        width: 85%;
+    }
+    
+    .logo-container2 h3 {
+        font-size: 22px;
+    }
+    
+    .input-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .input-group input {
+        padding: 11px 13px;
+        font-size: 0.95rem;
+    }
+    
+    .signup-btn {
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay-section {
+        padding: 14px;
+        width: 92%;
+        top: 20px;
+    }
+    
+    .logo-container2 h3 {
+        font-size: 18px;
+        padding: 8px;
+    }
+    
+    .input-group label {
+        font-size: 0.85rem;
+    }
+    
+    .input-group input {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .signup-btn {
+        padding: 11px 18px;
+        font-size: 0.95rem;
+    }
+    
+    .modal-content {
+        width: 85%;
+        padding: 16px;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.2rem;
+    }
+    
+    .auth-switch p {
+        font-size: 0.85rem;
+    }
 }

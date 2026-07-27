@@ -1,32 +1,115 @@
 .input-group {
-    margin-bottom: 20px; /* Add uniform bottom margin */
+    margin-bottom: 24px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: #354b8a;
+    font-weight: 500;
 }
 
 .input-group input {
-    margin: 8px 0px 0px 0px !important; /* Set the same margin for both inputs */
-    padding: 10px; /* Add padding for better appearance */
-    border-radius: 5px; /* Add border radius for input fields */
-    border: 1px solid #ccc; /* Add a border for better visibility */
+    width: 100%;
+    margin: 0;
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    border-color: #354b8a;
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(53, 75, 138, 0.1);
 }
 
 .login-form {
     display: flex;
     flex-direction: column;
-    height: 400px;
+    min-height: 300px;
+    max-height: 100%;
+    overflow-y: auto;
 }
 
 .login-btn {
-    padding: 12px;
+    padding: 14px 24px;
     background-color: #354b8a;
     color: white;
     border: none;
     border-radius: 8px;
     font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 30px;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .login-btn:hover {
-    background-color: #4CAF50;
+    background-color: #2c3e7d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(53, 75, 138, 0.3);
+}
+
+.login-btn:active {
+    transform: translateY(0);
+}
+
+.auth-switch {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.auth-switch p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.auth-link {
+    color: #354b8a;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.auth-link:hover {
+    color: #2c3e7d;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .input-group input {
+        padding: 12px 14px;
+        font-size: 0.95rem;
+    }
+    
+    .login-btn {
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .input-group label {
+        font-size: 0.9rem;
+    }
+    
+    .input-group input {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .login-btn {
+        padding: 11px 18px;
+        font-size: 0.95rem;
+    }
+    
+    .auth-switch p {
+        font-size: 0.9rem;
+    }
 }

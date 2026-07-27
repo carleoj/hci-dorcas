@@ -1,14 +1,31 @@
 .dashboard-stats {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Ensure items wrap onto the next line */
-    gap: 15px; /* Adds space between containers */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
     margin-top: 20px;
-    max-height: 400px; /* Constrain the container's height */
-    overflow-y: auto; /* Allow vertical scrolling if content exceeds */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    padding: 10px; /* Optional: padding for inner content */
-    box-sizing: border-box; /* Ensure padding is part of width */
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+}
+
+.student-content-container {
+    padding: 20px;
+    font-size: 1.1em;
+    margin-top: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
 }
 
 .dashboard-stats::-webkit-scrollbar {
@@ -22,15 +39,15 @@
     background: #999; /* Darker on hover */
 }   
 .stat-container {
-    flex: 1 1 calc(25% - 15px); /* 4 containers in a row */
     padding: 20px;
     text-align: center;
     background-color: #ffecae;
     border-radius: 12px;
     height: 200px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box; /* Ensure padding is included in width */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%;
 }
 
 .stat-container:hover {
@@ -50,23 +67,42 @@
     color: #157218;
 }
 
-@media (max-width: 718px) {
-    .stat-container {
-        height: 100px;
-        flex: 1 1 100%; /* Stacks all containers in one column */
-    }
+@media (max-width: 768px) {
     .dashboard-stats {
-        max-height: 300px; /* Adjust height for smaller screens */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .stat-container {
+        height: 150px;
+        padding: 15px;
+    }
+    
+    .stat-container h4 {
+        font-size: 1.3em;
+    }
+    
+    .stat-container p {
+        font-size: 1.3em;
     }
 }
 
-/* Media query for screens smaller than 660px */
 @media (max-width: 659px) {
-    .stat-container {
-        height: 100px;
-        flex: 1 1 100%; /* Stacks all containers in one column */
-    }
     .dashboard-stats {
-        max-height: 300px; /* Adjust height for smaller screens */
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .stat-container {
+        height: 120px;
+        padding: 15px;
+    }
+    
+    .stat-container h4 {
+        font-size: 1.2em;
+    }
+    
+    .stat-container p {
+        font-size: 1.2em;
     }
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import Header from './Header';
 import './styles/Login.css';
 import { api } from '../api';
@@ -81,6 +81,9 @@ const Login = ({ onLogin }) => {
                                 </div>
                                 <button type="submit" className="login-btn">Login</button>
                             </form>
+                            <div className="auth-switch">
+                                <p>Don't have an account? <Link to="/signup" className="auth-link">Sign up</Link></p>
+                            </div>
                         </div>
                     </div>
                 </div>

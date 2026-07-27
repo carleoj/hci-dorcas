@@ -4,17 +4,21 @@
   align-items: center;
   flex-direction: column;
   padding: 20px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .chatbox-container {
   display: flex;
   flex-direction: column;
-  height: 420px; /* Increased to accommodate the profile section */
+  height: 600px;
   width: 100%;
+  max-width: 100%;
   border: 1px solid #ddd;
   padding: 10px;
   border-radius: 18px;
   background-color: rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
 }
 
 /* Profile Section Styling */
@@ -35,6 +39,7 @@
   height: 80px;
   border-radius: 50%;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 .profile-details {
@@ -75,6 +80,7 @@
   padding: 10px 14px;
   border-radius: 16px;
   word-break: break-word;
+  box-sizing: border-box;
 }
 
 /* Student (right side) */
@@ -137,4 +143,96 @@
 
 .send-button:hover {
   background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .appointment-container-chat {
+    padding: 15px;
+  }
+  
+  .chatbox-container {
+    height: 500px;
+    padding: 8px;
+  }
+  
+  .profile-section {
+    padding: 8px;
+  }
+  
+  .profile-image {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .counselor-name {
+    font-size: 16px;
+  }
+  
+  .counselor-role {
+    font-size: 12px;
+  }
+  
+  .message {
+    max-width: 80%;
+    padding: 8px 12px;
+  }
+  
+  .message-input {
+    font-size: 14px;
+    padding: 8px;
+  }
+  
+  .send-button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .appointment-container-chat {
+    padding: 10px;
+  }
+  
+  .chatbox-container {
+    height: 450px;
+    padding: 6px;
+  }
+  
+  .profile-section {
+    padding: 6px;
+    margin-bottom: 10px;
+  }
+  
+  .profile-image {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .counselor-name {
+    font-size: 14px;
+  }
+  
+  .counselor-role {
+    font-size: 11px;
+  }
+  
+  .message {
+    max-width: 85%;
+    padding: 6px 10px;
+    font-size: 0.9em;
+  }
+  
+  .message-time {
+    font-size: 10px;
+  }
+  
+  .message-input {
+    font-size: 13px;
+    padding: 6px;
+  }
+  
+  .send-button {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
 }

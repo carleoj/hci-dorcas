@@ -2,17 +2,19 @@
 .sidebar {
     position: fixed;
     top: 0;
-    left: -280px; /* Hide off-screen initially */
+    left: -280px;
     width: 280px;
     height: 100%;
-    background-color: #fff; /* Background color */
-    transition: left 0.3s ease; /* Animation for sliding */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-    z-index: 1000; /* Ensure it's above other content */
+    background-color: #fff;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .sidebar.open {
-    left: 0; /* Show when open */
+    left: 0;
 }
 
 /* Sidebar.css */
@@ -23,63 +25,159 @@
 }
 
 .sidebar li a {
-    display: block; /* Make the link a block element */
-    padding: 25px; /* Add padding for a larger clickable area */
-    text-decoration: none; /* Remove underline */
-    margin: 10px 15px 0px 15px;
-    margin-bottom: 15px;
-    color: #354b8a; /* Link text color */
-    background-color: #fff99e; /* Background color for the links */
-    border-radius: 12px; /* Rounded corners */
-    border: 1px solid black;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    display: block;
+    padding: 18px 20px;
+    text-decoration: none;
+    margin: 8px 15px;
+    color: #354b8a;
+    background-color: #fff99e;
+    border-radius: 12px;
+    border: 1px solid #354b8a;
+    transition: all 0.3s ease;
+    font-size: 15px;
+    font-weight: 500;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .sidebar li a:hover {
-    background-color: #354b8a; /* Background color on hover */
-    color: #ffffff; /* Text color on hover */
+    background-color: #354b8a;
+    color: #ffffff;
+    transform: translateX(4px);
+}
+
+.sidebar li a:active {
+    transform: scale(0.98);
 }
 
 
 /* Sidebar.css */
 /* Sidebar.css */
 .close-btn {
-    display: flex; /* Use Flexbox for alignment */
-    align-items: center; /* Center items vertically */
-    background: none; /* Remove background */
-    border: none; /* Remove border */
-    cursor: pointer; /* Pointer cursor for button */
-    padding: 10px; /* Add padding for the button */
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 16px 20px;
+    margin-bottom: 10px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .icon {
-    font-size: 35px; /* Increase the size of the arrow icon */
-    color: #354b8a; /* Match the color of your links or adjust as needed */
+    font-size: 32px;
+    color: #354b8a;
+    transition: transform 0.2s;
+}
+
+.close-btn:hover .icon {
+    transform: translateX(-4px);
 }
 
 .menu-text {
-    margin-left: 10px; /* Space between the icon and text */
-    font-size: 24px; /* Increase the size of the MENU text */
-    color: #354b8a; /* Match the color of your links or adjust as needed */
+    margin-left: 12px;
+    font-size: 20px;
+    color: #354b8a;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 .logo-box {
-    height: 230px;
+    height: 180px;
     background-color: rgb(202, 207, 212);
-    margin: 10px;
-    display: flex; /* Change from flexbox to flex */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center items vertically */
-    align-items: center; /* Center items horizontally */
-    border-radius: 21px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    padding: 20px;
 }
 
 .logo-box p {
     text-align: center;
-    font-size: 15px; /* Font size for other texts */
+    font-size: 14px;
     color: #354b8a;
+    margin: 4px 0;
+    line-height: 1.4;
 }
 
 .logo-box p:first-child {
-    font-size: 30px; /* Make DORCAS logo slightly smaller */
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 280px;
+    }
+    
+    .sidebar.open {
+        left: 0;
+    }
+    
+    .sidebar li a {
+        padding: 16px 18px;
+        font-size: 14px;
+        margin: 6px 12px;
+    }
+    
+    .icon {
+        font-size: 32px;
+    }
+    
+    .menu-text {
+        font-size: 18px;
+    }
+    
+    .logo-box {
+        height: 160px;
+        margin: 12px;
+    }
+    
+    .logo-box p:first-child {
+        font-size: 24px;
+    }
+    
+    .logo-box p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 280px;
+    }
+    
+    .sidebar.open {
+        left: 0;
+    }
+    
+    .sidebar li a {
+        padding: 14px 16px;
+        font-size: 13px;
+        margin: 5px 10px;
+    }
+    
+    .icon {
+        font-size: 32px;
+    }
+    
+    .menu-text {
+        font-size: 16px;
+    }
+    
+    .logo-box {
+        height: 140px;
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .logo-box p:first-child {
+        font-size: 22px;
+    }
+    
+    .logo-box p {
+        font-size: 12px;
+    }
 }

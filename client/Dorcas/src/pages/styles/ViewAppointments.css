@@ -27,6 +27,8 @@ body {
     gap: 20px;
     justify-content: center;
     padding: 0 10px;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .appointment-card {
@@ -163,7 +165,7 @@ body {
 
 @media (max-width: 600px) {
     .appointments-title {
-        font-size: 1.8em;
+        font-size: 1.5em;
     }
 
     .separator {
@@ -172,6 +174,62 @@ body {
 
     .appointment-card {
         max-width: 100%;
+        padding: 12px;
+    }
+
+    .appointment-card h2 {
+        font-size: 1.2em;
+    }
+
+    .appointment-card p {
+        font-size: 0.85em;
+    }
+
+    .appointment-buttons {
+        flex-wrap: wrap;
+    }
+
+    .view-more-button,
+    .accept-button,
+    .decline-button,
+    .complete-button {
+        padding: 8px 12px;
+        font-size: 0.85em;
+    }
+
+    .modal-content {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .modal-content h3 {
+        font-size: 1.2em;
+    }
+
+    .modal-details p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    .appointments-title {
+        font-size: 1.7em;
+    }
+
+    .appointment-card h2 {
+        font-size: 1.3em;
+    }
+
+    .appointment-card p {
+        font-size: 0.9em;
+    }
+
+    .view-more-button,
+    .accept-button,
+    .decline-button,
+    .complete-button {
+        padding: 9px 14px;
+        font-size: 0.9em;
     }
 }
 

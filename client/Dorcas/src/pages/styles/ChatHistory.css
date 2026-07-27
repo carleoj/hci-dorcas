@@ -14,24 +14,28 @@
 }
 
 .students-chats-container {
-  height: 450px; /* Fixed height */
-  overflow-y: auto; /* Enable vertical scrolling */
+  height: 600px;
+  overflow-y: auto;
   border-radius: 18px;
   background-color: rgba(255, 255, 255, 0.5);
   padding: 10px;
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .chat-box {
-  margin-bottom: 10px; /* Space between chatboxes */
+  margin-bottom: 10px;
   padding: 10px;
   background-color: #354b8a;
   border-radius: 8px;
-  height: auto; /* Allow height to adjust dynamically */
+  height: auto;
   cursor: pointer;
   display: flex;
-  flex-direction: column; /* Stack name and time vertically */
-  justify-content: flex-start; /* Align items to the top */
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .chat-box:hover {
@@ -61,4 +65,43 @@
   text-align: right; /* Right-align the date */
   flex-shrink: 0; /* Prevent shrinking */
   margin-left: 10px; /* Add space between the time and date */
+}
+
+@media (max-width: 768px) {
+  .students-chats-container {
+    height: 500px;
+    padding: 8px;
+  }
+  
+  .chat-box {
+    padding: 8px;
+  }
+  
+  .chat-box-header {
+    font-size: 18px;
+  }
+  
+  .chat-box-time {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .students-chats-container {
+    height: 450px;
+    padding: 6px;
+  }
+  
+  .chat-box {
+    padding: 6px;
+    margin-bottom: 8px;
+  }
+  
+  .chat-box-header {
+    font-size: 16px;
+  }
+  
+  .chat-box-time {
+    font-size: 12px;
+  }
 }

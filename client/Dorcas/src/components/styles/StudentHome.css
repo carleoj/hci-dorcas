@@ -4,12 +4,13 @@
     font-size: 1.2em;
     font-weight: bold;
     display: flex;
-    justify-content: space-between;  /* This will push items to opposite sides */
+    justify-content: space-between;
     align-items: center;
 }
 
 .welcome-message {
     margin: 0;
+    font-size: 0.8em;
 }
 
 .connection-status {
@@ -34,15 +35,18 @@
     margin-top: 20px;
     background-color: #f2f2f2;
     border: 1px solid rgb(255, 255, 255);
-    height: 440px; /* Default height */
-    max-height: 80vh; /* Add a maximum height for better responsiveness */
+    height: 440px;
+    max-height: 80vh;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-family: 'Arial', sans-serif;
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: column;
     justify-content: flex-start;
     overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
 }
 
 .student-content-container p {
@@ -100,42 +104,103 @@
 
 /* Media query for mobile screens */
 @media (max-width: 659px) {
+    .content-container {
+        padding: 15px;
+        font-size: 0.9em;
+    }
+
+    .welcome-message {
+        font-size: 1em;
+    }
+
+    .connection-status {
+        font-size: 0.85em;
+    }
+
+    .green-circle {
+        width: 12px;
+        height: 12px;
+    }
+
     .student-content-container {
         padding: 15px;
-        font-size: 1em !important; /* Smaller font size for student content */
-        min-height: 300px; /* Set a reasonable minimum height */
-        max-height: 70vh; /* Allow it to grow up to 70% of the viewport height */
-        height: auto; /* Ensure it adapts naturally */
+        font-size: 1em !important;
+        min-height: 300px;
+        max-height: 70vh;
+        height: auto;
+    }
+
+    .student-table {
+        font-size: 0.75em;
+    }
+
+    .student-table th, .student-table td {
+        padding: 6px 8px;
+    }
+}
+
+@media (min-width: 660px) and (max-width: 768px) {
+    .content-container {
+        padding: 15px;
+        font-size: 1em;
+    }
+
+    .welcome-message {
+        font-size: 1.1em;
+    }
+
+    .connection-status {
+        font-size: 0.95em;
+    }
+
+    .green-circle {
+        width: 15px;
+        height: 15px;
+    }
+
+    .student-content-container {
+        padding: 15px;
+        font-size: 1em;
+        height: 500px;
+        max-height: 60vh;
+    }
+
+    .student-table {
+        font-size: 0.85em;
+    }
+
+    .table-container {
+        max-height: 500px;
     }
 }
 
 @media (min-width: 700px){
     .content-container {
         padding: 15px;
-        font-size: 1em !important; /* Ensure this applies on smaller screens */
+        font-size: 1em;
     }
 
     .welcome-message {
-        font-size: 1.3em !important; /* Smaller font size for welcome message */
+        font-size: 1.3em;
     }
 
     .connection-status {
-        font-size: 1.3em !important; /* Smaller font size for connected status */
+        font-size: 1.3em;
     }
 
     .green-circle {
         width: 15px;
-        height: 15px; /* Smaller circle for mobile */
+        height: 15px;
     }
 
     .student-content-container {
         padding: 15px;
-        font-size: 1em !important; /* Smaller font size for student content */
-        height: 500px; /* Allow height to adjust automatically */
-        max-height: 60vh; /* Limit the height to 60% of the viewport height */
+        font-size: 1em;
+        height: 500px;
+        max-height: 60vh;
     }
 
     .table-container {
-        max-height: 500px; /* Reduce table height for smaller screens */
+        max-height: 500px;
     }
 }

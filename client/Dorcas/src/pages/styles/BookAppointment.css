@@ -4,6 +4,8 @@
     align-items: center;
     flex-direction: column;
     padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .appointments-title {
@@ -53,8 +55,10 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px; /* Adjust width as needed */
-    width: 100%;
+    max-width: 400px;
+    width: 90%;
+    max-width: 90vw;
+    box-sizing: border-box;
 }
 
 .appointment-close-button {
@@ -171,8 +175,10 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 500px; /* Adjust width as needed */
-    width: 100%;
+    max-width: 500px;
+    width: 90%;
+    max-width: 90vw;
+    box-sizing: border-box;
 }
 
 .confirmation-modal-content h2{
@@ -231,7 +237,9 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 15px;
-    width: 300px; /* Adjust width as needed */
+    width: 300px;
+    max-width: 100%;
+    box-sizing: border-box;
     box-shadow: 5px 5px 10px rgba(0, 0, 0.3, 0.3);
 }
 
@@ -269,4 +277,82 @@
     scrollbar-color: #354b8a #fffac3; /* Handle color and track color */
 }
 
+@media (max-width: 768px) {
+    .appointment-container {
+        padding: 15px;
+    }
+    
+    .appointments-title {
+        font-size: 1.5rem;
+    }
+    
+    .appointment-modal-content,
+    .confirmation-modal-content {
+        padding: 15px;
+        max-width: 85vw;
+    }
+    
+    .appointment-card-s {
+        width: 280px;
+        padding: 12px;
+    }
+    
+    .appointment-card-s h3 {
+        font-size: 1.2rem;
+    }
+    
+    .appointment-card-s p {
+        font-size: 16px;
+    }
+    
+    .active-requests {
+        height: 300px;
+    }
+}
 
+@media (max-width: 480px) {
+    .appointment-container {
+        padding: 10px;
+    }
+    
+    .appointments-title {
+        font-size: 1.3rem;
+    }
+    
+    .appointment-modal-content,
+    .confirmation-modal-content {
+        padding: 12px;
+        max-width: 90vw;
+    }
+    
+    .appointment-modal-content h2,
+    .confirmation-modal-content h2 {
+        font-size: 1.3rem;
+        padding: 10px;
+    }
+    
+    .appointment-card-s {
+        width: 100%;
+        margin: 10px 5px;
+        padding: 10px;
+    }
+    
+    .appointment-card-s h3 {
+        font-size: 1rem;
+    }
+    
+    .appointment-card-s p {
+        font-size: 14px;
+    }
+    
+    .active-requests {
+        height: 280px;
+        padding: 0 5px;
+    }
+    
+    .submit-button,
+    .cancel-button {
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+}
