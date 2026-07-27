@@ -13,7 +13,8 @@ app.use(bodyParser.json());
 app.use('/api', userRoutes);
 app.use('/api', appRoutes);
 
-const PORT = 8081;
+const PORT = process.env.PORT;
+
 app.listen(PORT, () => {
-    console.log(`Listening to http://localhost:${PORT}`);
+    console.log(`Connected to MySQL`);
 });
