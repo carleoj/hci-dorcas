@@ -2,7 +2,10 @@
 
 Dorcas is a web-based counseling platform developed to provide students with a secure and accessible way to communicate with counselors. The system includes features such as appointment scheduling, encrypted messaging, and user authentication.
 
-#### Demo
+### Visit
+- https://vercel.com/carl-panos-projects/hci-dorcas
+
+#### Watch
 - https://youtu.be/4iWBH_m3uMg?si=aLMS2yieHw6XHe9s
 
 ---
