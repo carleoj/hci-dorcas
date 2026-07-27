@@ -16,5 +16,5 @@ app.use('/api', appRoutes);
 const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
-    console.log(`Connected to MySQL`);
+    console.log(`Server Running`);
 });
