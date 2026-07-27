@@ -5,7 +5,7 @@ Dorcas is a web-based counseling platform developed to provide students with a s
 ### Visit
 - https://vercel.com/carl-panos-projects/hci-dorcas
 
-#### Watch
+### Watch
 - https://youtu.be/4iWBH_m3uMg?si=aLMS2yieHw6XHe9s
 
 ---
