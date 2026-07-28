@@ -110,7 +110,7 @@
     }
 
     .welcome-message {
-        font-size: 1em;
+        font-size: 0.8em;
     }
 
     .connection-status {
@@ -146,7 +146,7 @@
     }
 
     .welcome-message {
-        font-size: 1.1em;
+        font-size: 1.0em;
     }
 
     .connection-status {
@@ -181,7 +181,7 @@
     }
 
     .welcome-message {
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
 
     .connection-status {

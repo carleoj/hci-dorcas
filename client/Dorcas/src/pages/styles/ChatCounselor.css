@@ -11,7 +11,7 @@
 .chatbox-container {
   display: flex;
   flex-direction: column;
-  height: 600px;
+  height: 430px;
   width: 100%;
   max-width: 100%;
   border: 1px solid #ddd;
@@ -151,7 +151,7 @@
   }
   
   .chatbox-container {
-    height: 500px;
+    height: 420px;
     padding: 8px;
   }
   
