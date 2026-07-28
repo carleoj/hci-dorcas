@@ -11,6 +11,8 @@
 }
 
 .description-container {
+  display: flex;
+  align-items: center;
   margin-top: 10px;
   text-align: center;
   padding: 15px;
@@ -25,6 +27,7 @@
 .description {
   font-size: 1.2rem;
   line-height: 1.5;
+  justify-content: center;
   color: #333;
   margin-bottom: 20px; /* Space below description */
 }
