@@ -56,7 +56,7 @@ const Signup = () => {
                 <div className="app-main-content">
                     <div className="overlay-section">
                         <div className="logo-container2">
-                            <h3>CREATE YOUR DORCAS ACCOUNT</h3>
+                            <h4>CREATE YOUR DORCAS ACCOUNT</h4>
                         </div>
                         <div className="form-container">
                             <form className="signup-form" onSubmit={handleSubmit}>
@@ -141,7 +141,7 @@ const Signup = () => {
                 </div>
             </main>
             <footer className="app-footer">
-                <p>&copy; 2024 Dorcas</p>
+                <p>&copy; {new Date().getFullYear()} Dorcas</p>
             </footer>
             {showModal && (
     <div className="modal">

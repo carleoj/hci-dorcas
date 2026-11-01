@@ -52,8 +52,8 @@
     }
     }
 
-.logo-container2 h3 {
-    font-size: 26px;
+.logo-container2 h4 {
+    font-size: 18px;
     color: #2c3e7d;
     padding: 10px;
 }
@@ -67,7 +67,7 @@
     flex-direction: column;
 }
 .input-group {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     width: 100%;
     text-align: left;
 }
@@ -208,7 +208,7 @@
         width: 85%;
     }
     
-    .logo-container2 h3 {
+    .logo-container2 h4 {
         font-size: 22px;
     }
     
@@ -234,7 +234,7 @@
         top: 20px;
     }
     
-    .logo-container2 h3 {
+    .logo-container2 h4 {
         font-size: 18px;
         padding: 8px;
     }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './styles/LandingA.css';
-import logo from '../assets/logoDorcas.png';
+import logo from '../assets/compassion.png';
 
 const LandingA = () => {
     const navigate = useNavigate();
@@ -35,7 +35,7 @@ const LandingA = () => {
                 </div>
             </main>
             <footer className="app-footer">
-                <p>&copy; 2024 Dorcas</p>
+                <p>&copy; {new Date().getFullYear()} Dorcas</p>
             </footer>
         </div>
     );
